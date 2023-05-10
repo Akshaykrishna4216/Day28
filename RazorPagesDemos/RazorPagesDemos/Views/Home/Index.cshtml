@@ -1,0 +1,49 @@
+﻿@*@{
+    var joe = new Person("Joe", 33);
+}
+<p>Name:@(joe.Name)</p>
+
+<p>Age:@(joe.Age)</p>
+@{
+    var quote = "The future depends on what you do today. - Mahatma Gandhi";
+}
+
+<p>@quote</p>
+
+@{
+    quote = "Hate cannot drive out hate, only love can do that. - Martin Luther King, Jr.";
+}
+
+<p>@quote</p>
+
+@{
+    void RenderName(string name)
+    {
+        <p>Name: <strong>@name</strong></p>
+    }
+
+    RenderName("Mahatma Gandhi");
+    RenderName("Martin Luther King, Jr.");
+    RenderName("Akshaykrishna P R");
+}
+
+@{
+  lflflflffllf  var inCSharp = true;
+    <p>Now in HTML, was in C# @inCSharp</p>
+}*@
+
+@{
+    var people = new[]
+        {
+        new Person("Anu", 25),
+        new Person("Akshay", 22)
+        };
+  }
+
+@for (var i = 0; i < people.Length; i++)
+{
+    var person = people[i];
+    <text>Name: @person.Name</text>
+}
+
+
